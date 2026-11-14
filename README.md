@@ -1,1 +1,1 @@
-Poll SCM trigger practice
+webhook trigger practice
