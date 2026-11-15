@@ -26,7 +26,7 @@ pipeline {
 					emailext (
 						subject: 'Build Sucessfull',
 						body: 'please check console for detailed output',
-						to: 'somesh.reports@gmail.com
+						to: 'somesh.reports@gmail.com'
 					)
 				}
 			}
@@ -39,7 +39,7 @@ pipeline {
 					emailext (
 						subject: 'Build Failed',
 						body: 'please check console for detailed output',
-						to: 'somesh.reports@gmail.com
+						to: 'somesh.reports@gmail.com'
 					)
 				}
 			}
