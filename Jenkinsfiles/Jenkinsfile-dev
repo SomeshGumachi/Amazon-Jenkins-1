@@ -4,7 +4,7 @@ pipeline {
 	parameters {
 		booleanParam(
 			name: 'SEND_EMAIL',
-			deafaultValue: false,
+			deafaultValue: true,
 			description: 'Enable Email notification'
 			
 		)
