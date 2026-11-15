@@ -1,14 +1,6 @@
 pipeline {
     agent any
 	
-	parameters {
-		booleanParam(
-			name: 'SEND_EMAIL',
-			defaultValue: true,
-			description: 'Enable Email notification'
-			
-		)
-	}
     stages {
         stage('build') {
             steps {
@@ -21,28 +13,24 @@ pipeline {
         success{
 			echo 'Build success'
 			
-			script {
-				if (params.SEND_EMAIL) {
-					emailext (
+				emailext (
 						subject: 'Build Sucessfull',
 						body: 'please check console for detailed output',
 						to: 'somesh.reports@gmail.com'
 					)
-				}
-			}
+				
+			
         }
   
        failure{
 			echo 'Failure in the build'
-			script {
-				if (params.SEND_EMAIL) {
 					emailext (
 						subject: 'Build Failed',
 						body: 'please check console for detailed output',
 						to: 'somesh.reports@gmail.com'
 					)
-				}
-			}
+				
+			
        }
     }
 }
