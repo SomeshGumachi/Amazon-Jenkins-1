@@ -25,7 +25,7 @@ pipeline {
 				if (params.SEND_EMAIL) {
 					emailext (
 						subject: 'Build Sucessfull',
-						body: 'please check console for detailed output'
+						body: 'please check console for detailed output',
 						to: 'somesh.reports@gmail.com
 					)
 				}
@@ -38,7 +38,7 @@ pipeline {
 				if (params.SEND_EMAIL) {
 					emailext (
 						subject: 'Build Failed',
-						body: 'please check console for detailed output'
+						body: 'please check console for detailed output',
 						to: 'somesh.reports@gmail.com
 					)
 				}
